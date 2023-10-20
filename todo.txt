@@ -1,0 +1,22 @@
+----- TODO -----
+
+Delivery 1
+1. Create player forms and validations along with required fields ~ 10 hours [include realm/redux if needed]
+2. View players list View ~ 2 hours
+3. Home --> grid structure ~ 2 hours
+    a. random team generator -- based on skill based balanced team algorithm ~ 5 hours
+    b. view teams ~ 2 hours
+4. Edit players traits ~ 2 hours
+
+Delivery 2
+5. team scoring
+6. team availability weekly
+7. team money distribution
+8. score history and best player --> scoring/keeping/control/defending --> top scorer
+
+Delivery 3
+9. Profile - login and registerations
+10. admin/player view
+
+Delivery 4
+react-native app may be :D
