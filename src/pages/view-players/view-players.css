@@ -1,0 +1,8 @@
+/* CSS to hide the "ID" column */
+.MuiDataGrid-columnHeader[ID] {
+  display: none;
+}
+
+.MuiDataGrid-cell[ID] {
+  display: none;
+}

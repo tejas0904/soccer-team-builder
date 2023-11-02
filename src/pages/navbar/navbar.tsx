@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import { Box, Typography, useTheme } from "@mui/material";
-import FlexBetween from "../../components/FlexBetween";
+import FlexBetween from "../../components/flex-between";
 
 type Props = {};
 
@@ -43,6 +43,18 @@ const Navbar = (props: Props) => {
             }}
           >
             Players
+          </Link>
+        </Box>
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/logout"
+            onClick={() => setSelected("logout")}
+            style={{
+              color: selected === "logout" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+            Logout
           </Link>
         </Box>
       </FlexBetween>

@@ -1,6 +1,6 @@
 import { Box, Link, Typography, useTheme } from "@mui/material";
 import React, { MouseEventHandler } from "react";
-import FlexBetween from "./FlexBetween";
+import FlexBetween from "./flex-between";
 
 type Props = {
   title: string;
