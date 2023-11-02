@@ -46,16 +46,3 @@ export default function useApolloClient() {
 
   return client;
 }
-
-//   // Guarantee that there's a logged in user with a valid access token
-//   if (!realmApp.currentUser) {
-//     // If no user is logged in, log in an anonymous user. The logged in user will have a valid
-//     // access token.
-//     await realmApp.logIn(Realm.Credentials.anonymous());
-//   } else {
-//     // An already logged in user's access token might be stale. To guarantee that the token is
-//     // valid, we refresh the user's custom data which also refreshes their access token.
-//     await realmApp.currentUser.refreshCustomData();
-//   }
-
-//   return realmApp.currentUser?.accessToken;

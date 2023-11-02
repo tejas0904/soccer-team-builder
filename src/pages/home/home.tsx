@@ -7,7 +7,6 @@ import { ALL_PLAYERS } from "../../query/player";
 import { useQuery } from "@apollo/client";
 import { generateBalancedTeams } from "../../utils/TeamCreator";
 import { Team } from "../../models/Team";
-import { useApp } from "../../context/realm-app";
 import { Player } from "../../models/Player";
 import { getRestValues } from "../../utils/utils";
 
@@ -41,8 +40,6 @@ const Home: FC = () => {
       flex: 1,
     },
   ];
-
-  const { realmApp } = useApp();
 
   const { loading, error, data, called } = useQuery(ALL_PLAYERS);
 
@@ -78,8 +75,6 @@ const Home: FC = () => {
       setTeams(generateBalancedTeams(players, 3));
     }
   };
-
-  console.log("teams :: ", teams);
 
   const onSnackbarClose = () => {
     setSnackbarOpen(false);
@@ -119,24 +114,6 @@ const Home: FC = () => {
           gridTemplateRows: "repeat(3, minmax(370px, 1))",
         }}
       >
-        {/* {teams && (
-          <Box id={teams?.[0].name} key={teams?.[0].name}>
-            <Typography m="10px 0 10px 0" variant="h4">
-              {teams?.[0].name}
-            </Typography>
-            <DataGrid
-              columnVisibilityModel={{
-                id: false,
-              }}
-              disableRowSelectionOnClick
-              disableColumnMenu
-              rows={teams?.[0].players}
-              columns={columns}
-              hideFooter
-            />
-          </Box>
-        )} */}
-
         {teams?.map((team) => {
           return (
             <>

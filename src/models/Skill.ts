@@ -5,5 +5,4 @@ export type Skill = {
   agility: number;
   speed: number;
   otherTraits?: number;
-  // comments?: string;
 };
