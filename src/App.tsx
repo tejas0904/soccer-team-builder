@@ -5,7 +5,6 @@ import { createTheme } from "@mui/material/styles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { themeSettings } from "./theme";
 import * as Realm from "realm-web";
-// import { ApolloProvider, useApolloClient } from "@apollo/client";
 import { AppProvider, useApp } from "./context/realm-app";
 import atlasConfig from "./atlasConfig.json";
 import Home from "./pages/home/home";

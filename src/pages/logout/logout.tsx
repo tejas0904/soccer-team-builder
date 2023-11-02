@@ -1,6 +1,5 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import * as Realm from "realm-web";
 
 type LogoutProps = {
   logout: () => Promise<void>;

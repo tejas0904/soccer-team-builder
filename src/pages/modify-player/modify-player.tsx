@@ -1,14 +1,13 @@
+import React, { useEffect, useState } from "react";
 import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, Slider, Snackbar, TextField, Typography, useTheme } from "@mui/material";
-
 import { Field, Form, Formik } from "formik";
 import * as yup from "yup";
 import BoxHeader from "../../components/box-header";
 import { Player, Position } from "../../models/Player";
-import "./modify-player.css";
 import { useMutation } from "@apollo/client";
 import { ALL_PLAYERS, INSERT_PLAYER } from "../../query/player";
-import React, { useEffect, useState } from "react";
 import CustomAlert from "../../components/alert";
+import "./modify-player.css";
 
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
@@ -29,7 +28,6 @@ const initialValues: Player = {
     defence: 0,
     agility: 0,
     speed: 0,
-    // comments: "",
   },
 };
 
@@ -59,7 +57,6 @@ const ModifyPlayers = () => {
   });
 
   const handleFormSubmit = async (values: Player) => {
-    console.log("handleFormSubmit :: ", values);
     await insertPlayer({
       variables: {
         playerInput: values,
@@ -70,8 +67,8 @@ const ModifyPlayers = () => {
   const [snackbarOpen, setSnackbarOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    called && setSnackbarOpen(true);
-  }, [called]);
+    called && !loading && setSnackbarOpen(true);
+  }, [called, loading]);
 
   const onSnackbarClose = () => {
     setSnackbarOpen(false);
@@ -231,7 +228,7 @@ const ModifyPlayers = () => {
           )}
         </Formik>
 
-        <Snackbar open={snackbarOpen} autoHideDuration={1000} onClose={onSnackbarClose}>
+        <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={onSnackbarClose}>
           <CustomAlert onClose={onSnackbarClose} severity={error ? "error" : "success"} sx={{ width: "100%" }}>
             {error ? "Cannot add a player" : "Player added"}
           </CustomAlert>
