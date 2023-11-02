@@ -66,13 +66,10 @@ const Home: FC = () => {
 
   const [teams, setTeams] = useState<Team[]>();
 
-  useEffect(() => {
-    called && setSnackbarOpen(true);
-  }, [called]);
-
   const onGenerateTeams = () => {
     if (players) {
       setTeams(generateBalancedTeams(players, 3));
+      setSnackbarOpen(true);
     }
   };
 
@@ -136,7 +133,7 @@ const Home: FC = () => {
       </Box>
       <Snackbar open={snackbarOpen} autoHideDuration={1000} onClose={onSnackbarClose}>
         <CustomAlert onClose={onSnackbarClose} severity={error ? "error" : "success"} sx={{ width: "100%" }}>
-          {error ? "Cannot add a player" : "Player added"}
+          {error ? "Team generation error" : "Team generated"}
         </CustomAlert>
       </Snackbar>
     </Box>
