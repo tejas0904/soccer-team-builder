@@ -1,11 +1,9 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
-import { mockPlayers } from "../../data/mockData";
-import BoxHeader from "../../components/BoxHeader";
+import { mockPlayers } from "../../data/mock-data";
 import { Skill } from "../../models/Skill";
-import FlexBetween from "../../components/FlexBetween";
 
-const Home = () => {
+const Teams = () => {
   const theme = useTheme();
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 50, flex: 1 },
@@ -79,4 +77,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Teams;

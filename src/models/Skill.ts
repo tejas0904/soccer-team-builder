@@ -1,7 +1,9 @@
 export type Skill = {
   ballControl: number;
   attack: number;
-  defense: number;
+  defence: number;
   agility: number;
+  speed: number;
   otherTraits?: number;
+  // comments?: string;
 };

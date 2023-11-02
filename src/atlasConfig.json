@@ -1,0 +1,9 @@
+{
+    "appId": "application-0-pudev",
+    "appUrl": "https://realm.mongodb.com/groups/6532dbb652f5e7091521622f/apps/6532dcaf2214504784964f20",
+    "baseUrl": "https://realm.mongodb.com",
+    "clientApiBaseUrl": "https://us-east-1.aws.realm.mongodb.com",
+    "dataApiBaseUrl": "https://us-east-1.aws.data.mongodb-api.com",
+    "dataExplorerLink": "https://cloud.mongodb.com/links/6532dbb652f5e7091521622f/explorer/Cluster0/database/collection/find",
+    "dataSourceName": "mongodb-atlas"
+}

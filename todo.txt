@@ -20,3 +20,16 @@ Delivery 3
 
 Delivery 4
 react-native app may be :D
+
+
+-------------------------------
+
+//TODO
+
+//1. hide id field and make it so that it can update the isAvailable based on selected ID
+//2. add/modify player traits
+//3. have a generate team for this week button and access given to only admins
+//4. have the button to generate team and store it in collection with date
+
+
+//5. allow scoring for the team members and team 
